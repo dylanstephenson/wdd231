@@ -176,6 +176,11 @@ button:hover {
   margin-top: 13px;
   width: 300px;
 }
+#courses span {
+  font-family: var(--text-font);
+  color: var(--dark-text);
+  padding-top: 5px;
+}
 .completed {
   color: var(--light-text);
   background-color: var(--buttons);

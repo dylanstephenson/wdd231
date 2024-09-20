@@ -98,6 +98,9 @@ const courses = [
     }
 ]
 
+const initialCredits = 0
+const totalCredits = courses.reduce(function (acc, obj) {return acc + obj.credits; }, initialCredits);
+
 function setCourses(courseList) {
     courseList.forEach(function (course) {
         if (course.completed) {
@@ -109,6 +112,7 @@ function setCourses(courseList) {
             // console.log(courses[i].completed)
         }
     })
+    courseBox.innerHTML += `<span>Credits Needed to Complete Certificate: ${totalCredits}</span>`
 }
 const wddCourses = courses.filter((course) => course.subject == 'WDD')
 const cseCourses = courses.filter((course) => course.subject == 'CSE')
@@ -127,9 +131,4 @@ document.querySelector("#WDD").addEventListener('click', () => {
     courseBox.innerHTML = ''
     setCourses(wddCourses)
 })
-
-const initialCredits = 0
-const totalCredits = courses.reduce(function (acc, obj) {return acc + obj.credits; }, initialCredits);
-
-console.log(totalCredits);
 
