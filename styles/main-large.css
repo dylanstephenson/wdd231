@@ -94,3 +94,21 @@
         width: 80vw;
     }
 }
+
+/* Extra large screens, alignment gets thrown off, fixing grid*/
+
+@media screen and (min-width: 1600px) {
+    main {
+        height: 65vh;
+    }
+    
+    #cwork-box {
+        grid-column: 1/3
+    }
+    #place-box {
+        grid-column: 3/4
+    }
+    #certificate-box {
+        grid-column: 1/4;
+    }
+}
