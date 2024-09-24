@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --site-color: #B0BBBF;
+    --background-color: #cadbc8;
+    --card-color: #A1a499;
+    --heading-color: #3e6680;
+    --text-color: #00487c;
+    --text-font: "Della Respira", serif;
+    --header-font: "Quintessential", serif;
+    
+}
+
+h1 {
+    margin: 0 auto;
+    text-align: center;
+    color: var(--heading-color);
+    padding: 20px;
+    font-family: var(--header-font);
+    font-size: 3rem;
+}
+
+#cards {
+    width: 92vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    background-color: var(--background-color);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card {
+    background-color: var(--card-color);
+    justify-self: center;
+    margin-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    text-align: center;
+}
+.card h2 {
+    color: var(--text-color);
+    font-family: var(--text-font);
+    padding-bottom: 8px;
+}
+.card p {
+    font-family: serif;
+    padding-bottom: 4px;
+}
+.card img {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}

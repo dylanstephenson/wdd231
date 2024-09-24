@@ -1,0 +1,37 @@
+{
+    "familyName": "Johnson",
+    "moveDate": "December 8th, 2016",
+    "numRecords": 6,
+    "visited": false,
+    "familyMembers": [{
+        "name": "Billy",
+        "gender": "Male",
+        "birthday": "Nov 6th, 1980"
+    },
+    {
+        "name": "Sally",
+        "gender": "Female",
+        "birthday": "Jan 20th, 1982"
+    },
+    {
+        "name": "Jimmy",
+        "gender": "Male",
+        "birthday": "March 1st, 2010"
+    },
+    {
+        "name": "Jammy",
+        "gender": "Male",
+        "birthday": "April 1st, 2012"
+    },
+    {
+        "name": "Jommy",
+        "gender": "Male",
+        "birthday": "May 1st, 2014"
+    },
+    {
+        "name": "June",
+        "gender": "Female",
+        "birthday": "Sep 13th, 2018"
+    }
+]
+}
