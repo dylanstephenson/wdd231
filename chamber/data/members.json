@@ -1,0 +1,60 @@
+{
+    "members" : [
+        {
+            "name": "Cinemark Holdings Inc.",
+            "address": "3900 Dallas Parkway Plano, TX 75093",
+            "phoneNumber": "(972) 665-1500",
+            "websiteUrl": "https://ir.cinemark.com/",
+            "imageUrl": "https://variety.com/wp-content/uploads/2018/02/cinemark-logo.jpg",
+            "membership": "Gold"
+        },
+        {
+            "name": "Netflix Inc.",
+            "address": "121 Albright Way, Los Gatos, California, 95032.",
+            "phoneNumber": "(408) 540-3700",
+            "websiteUrl": "https://netflix.com",
+            "imageUrl": "data:image/png;base64,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",
+            "membership": "Member" 
+        },
+        {
+            "name": "Barnes & Noble Inc",
+            "address": "33 E 17th St 5th floor, New York, NY 10003",
+            "phoneNumber": "(212) 633-3300",
+            "websiteUrl": "https://www.barnesandnobleinc.com/",
+            "imageUrl": "data:image/png;base64,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",
+            "membership": "Gold" 
+        },
+        {
+            "name": "Murray Recreation Center",
+            "address": "202 E Murray Park Ave, Murray, UT 84107",
+            "phoneNumber": "(801) 284-4200",
+            "websiteUrl": "https://murray.utah.gov/223/Parks-Recreation",
+            "imageUrl": "https://murray.utah.gov/ImageRepository/Document?documentID=9775",
+            "membership": "Silver" 
+        },
+        {
+            "name": "Club Pickleball USA",
+            "address": "1330 Sandhill Rd, Orem, Utah, United States",
+            "phoneNumber": "(801) 895-0073",
+            "websiteUrl": "https://clubpickleballusa.com/",
+            "imageUrl": "https://clubpickleballusa.com/wp-content/uploads/2024/04/Club-Pickleball-USA-1.png",
+            "membership": "Silver"
+        },
+        {
+            "name": "Sony Interactive Entertainment LLC",
+            "address": "2207 Bridgepointe Pkwy, Ste 100, Foster City, CA 94404",
+            "phoneNumber": "1 (855) 999-7669",
+            "websiteUrl": "https://sonyinteractive.com/en/",
+            "imageUrl": "https://sonyinteractive.com/content/themes/sie/assets/images/Header-SIELogo.svg",
+            "membership": "Gold"
+        },
+        {
+            "name": "Via 313 Pizza",
+            "address": "6163 State St, Murray, UT 84107",
+            "phoneNumber": "(385) 327-4313",
+            "websiteUrl": "https://www.via313.com/",
+            "imageUrl": "https://www.via313.com/wp-content/uploads/2022/06/Full_Color_Logo-01.png",
+            "membership": "Member" 
+        }
+    ]
+}
