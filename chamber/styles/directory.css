@@ -150,8 +150,8 @@ ul.menuLinks li a:hover {
 
 .card p {
     padding: 5px;
-    font-family: var(--business-text-font);
 }
+
 .car p, .card a {
     font-family: var(--business-text-font);
 }

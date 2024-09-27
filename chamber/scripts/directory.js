@@ -4,6 +4,13 @@ const listView = document.querySelector("#list-view");
 const gridView = document.querySelector("#grid-view");
 const tableBody = document.querySelector("tbody");
 
+// Adding updated date and current year
+const today = new Date();
+const currentYear = document.querySelector("#currentyear");
+currentYear.innerHTML = today.getFullYear();
+const lastModified = document.querySelector("#lastModified");
+lastModified.innerHTML = `Last Modified: ${document.lastModified}`;
+
 //creating responsive nav
 const hamburgerElement = document.querySelector("#menuButton");
 const navElement = document.querySelector("#animateMe");
@@ -50,8 +57,8 @@ const displayMemberCards = (members) => {
         logo.setAttribute("src", member.imageUrl);
         logo.setAttribute("alt",`${member.name} logo`);
         logo.setAttribute("loading", "lazy");
-        logo.setAttribute("height", "150");
-        logo.setAttribute("width", "300");
+        logo.setAttribute("height", "130");
+        logo.setAttribute("width", "200");
 
         name.innerHTML = member.name;
         address.innerHTML = member.address;
@@ -98,3 +105,4 @@ const displayMemberTable= (members) => {
 }
 
 getMemberData();
+
