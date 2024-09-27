@@ -56,7 +56,7 @@ const displayMemberCards = (members) => {
         logo.setAttribute("id", member.id)
         logo.setAttribute("src", member.imageUrl);
         logo.setAttribute("alt",`${member.name} logo`);
-        logo.setAttribute("loading", "lazy");
+        // logo.setAttribute("loading", "lazy");
         logo.setAttribute("height", "180");
         logo.setAttribute("width", "320");
 
