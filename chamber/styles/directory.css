@@ -78,10 +78,15 @@ ul.menuLinks li a {
     font-size: 1.5rem;
     font-family: var(--business-title-font);
     font-weight: 600;
-    padding-left: 1rem;
+    padding: 10px;
 }
 ul.menuLinks li a:hover {
     background-color:#6b8e2d;
+}
+.wayfinding, .wayfinding:hover {
+    background-color: var(--secondary-color)!important;
+    padding: 10px;
+    border-radius: 7px;
 }
 
 #card-heading {

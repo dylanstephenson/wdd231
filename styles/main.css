@@ -18,8 +18,8 @@ body {
 
 header {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 480px;
+  grid-template-columns: 120px 180px 1fr; 
+  width: 110vw;
   margin: 0 auto;
   background-color: var(--headers)
 }
@@ -30,7 +30,7 @@ h1 {
   align-self: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 #header-img {
   text-align: end;
@@ -56,8 +56,8 @@ h1, h2 {
   margin-bottom: 1rem;
   font-size: 1.5rem;
   text-decoration: none;
-  padding: 5px 10px;
   color: var(--dark-text);
+  padding: 0px;
   background-color: var(--headers);
   border: none;
 }
@@ -107,13 +107,20 @@ h2 {
   border-top-right-radius: 5px;
 }
 
+main {
+  display: grid;
+  margin: 0 auto;
+  width: 110vw;
+  justify-self: center;
+}
+
 #cwork-box, #place-box, #certificate-box {
   text-align: center;
-  margin:0 auto;
+  margin: 0 auto;
   width: 400px;
 }
 #cwork-box {
-  height: 20vh;
+  height: 200px;
 
 }
 #cwork-box h2 {
@@ -131,7 +138,7 @@ h2 {
 }
 
 #place-box {
-  height: 41vh;
+  height: 420px;
 }
 
 #place-img {
@@ -141,9 +148,12 @@ h2 {
   margin-top: 20px;
   width: 200px;
 }
+#weather-caption {
+  text-transform: capitalize;
+}
 
 #certificate-box {
-  height: 53vh;
+  height: 400px;
 }
 #filter-buttons {
   margin-top: 8px;
@@ -203,6 +213,6 @@ footer {
   padding-top: 40px;
   padding-bottom: 40px;
   text-align: center;
-  width: 480px;
+  width: 110vw;
   color: var(--dark-text);
 }

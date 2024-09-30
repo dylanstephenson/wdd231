@@ -11,6 +11,7 @@
 
     header {
         width: 80vw;
+        grid-template-columns: 1fr 1fr 1fr;
     }
     #menu {
         display: none;
@@ -63,7 +64,7 @@
         grid-column: 1/2;
         grid-row: 1/2;
         width: 600px;
-        height: 300px;
+        height: 400px;
         justify-self: end;
     }
 
@@ -79,7 +80,7 @@
         grid-column: 2/4;
         grid-row: 1/2;
         width: 300px;
-        height: 300px;
+        height: 400px;
         justify-self: start;
     }
     #certificate-box {

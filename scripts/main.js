@@ -132,3 +132,30 @@ document.querySelector("#WDD").addEventListener('click', () => {
     setCourses(wddCourses)
 })
 
+// Adding weather to course page for OpenWeatherAPI assignment
+
+const currentTemp = document.querySelector("#current-temp");
+const weatherIcon = document.querySelector("#weather-icon");
+const imageDesc = document.querySelector("#weather-caption");
+const url = "https://api.openweathermap.org/data/2.5/weather?lat=40.66732498766148&lon=-111.89049055892718&appid=b7025480ecf693f3a6d458eefed62277&units=imperial"
+
+async function getApiData() {
+    const response = await fetch(url);
+    if (response.ok) {
+        const data = await response.json();
+        displayWeatherData(data);
+    } else {
+        console.log(response.text());
+    }
+}
+
+function displayWeatherData(data) {
+    currentTemp.innerHTML = `${data.main.temp}&#8457;`
+    const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+    const iconDesc = data.weather[0].description;
+    weatherIcon.setAttribute('src', iconsrc);
+    weatherIcon.setAttribute('alt', iconDesc);
+    imageDesc.innerHTML = iconDesc;
+}
+
+getApiData();
