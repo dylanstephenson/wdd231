@@ -108,6 +108,11 @@ ul.menuLinks li a:hover {
     color: var(--secondary-color);
     background-color: var(--header-text-c);
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 #grid-view {
     justify-self: end;
     margin-right: 5px;
