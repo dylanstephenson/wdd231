@@ -52,12 +52,6 @@
         margin-left: 10vw;
     }
 
-    #hero-img picture{
-        grid-column: 1/3;
-        grid-row: 1/3;
-        text-align: center;
-    }
-
     #join-link {
         margin-bottom: 6vh;
     }
@@ -80,6 +74,7 @@
     }
     #current-weather {
         width: 20vw;
+        height: 30vh;
         grid-row: 1/2;
         display: grid;
         grid-template-columns: 81px 1fr;
