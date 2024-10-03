@@ -1,8 +1,10 @@
-const url = "https://dylanstephenson.github.io/wdd231/chamber/data/members.json";
+import { url, getMemberData, displayMemberCards} from "./business-api.mjs";
+
 const cards = document.querySelector("#business-cards");
 const listView = document.querySelector("#list-view");
 const gridView = document.querySelector("#grid-view");
 const tableBody = document.querySelector("tbody");
+const data = await getMemberData();
 
 // Adding updated date and current year
 const today = new Date();
@@ -20,10 +22,8 @@ hamburgerElement.addEventListener('click', () => {
     hamburgerElement.classList.toggle('open');
 })
 
-async function getMemberData() {
-    const response = await fetch(url);
-    const data = await response.json();
-    displayMemberCards(data.members);
+function displayListAndGrid(data) {
+    displayMemberCards(data.members, cards);
     gridView.classList = 'selected';
     listView.addEventListener('click', () => {
         cards.innerHTML='';
@@ -37,51 +37,10 @@ async function getMemberData() {
         tableBody.innerHTML='';
         gridView.classList = 'selected';
         listView.classList = ''
-        displayMemberCards(data.members);
+        displayMemberCards(data.members, cards);
     })
     
 }
-
-const displayMemberCards = (members) => {
-    members.forEach(member => {
-        const card = document.createElement("section");
-        card.classList = "card";
-        const logo = document.createElement("img");
-        const name = document.createElement("h2");
-        const address = document.createElement("p");
-        const phoneNum = document.createElement("p");
-        const website = document.createElement("a");
-        const membership = document.createElement("p");
-
-        logo.setAttribute("id", member.id)
-        logo.setAttribute("src", member.imageUrl);
-        logo.setAttribute("alt",`${member.name} logo`);
-        logo.setAttribute("loading", "lazy");
-        logo.setAttribute("height", "180");
-        logo.setAttribute("width", "320");
-
-        name.innerHTML = member.name;
-        address.innerHTML = member.address;
-        phoneNum.innerHTML = member.phoneNumber;
-
-        website.classList = "business-url"
-        website.setAttribute("href", member.websiteUrl);
-        website.setAttribute("target", "_blank");
-        website.innerHTML = member.websiteUrl;
-
-        membership.innerHTML = `Membership: ${member.membership}`
-
-        card.appendChild(logo)
-        card.appendChild(name)
-        card.appendChild(address)
-        card.appendChild(phoneNum)
-        card.appendChild(website)
-        card.appendChild(membership)
-
-        cards.appendChild(card)
-    })
-}
-
 const displayMemberTable= (members) => {
     members.forEach(member => {
         const table = document.createElement("tr")
@@ -104,5 +63,4 @@ const displayMemberTable= (members) => {
     })
 }
 
-getMemberData();
-
+displayListAndGrid(data);

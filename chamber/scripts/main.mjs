@@ -1,3 +1,4 @@
+import { url, getMemberData, displayMemberCards} from "./business-api.mjs";
 
 // Adding updated date and current year
 const today = new Date();
@@ -57,7 +58,6 @@ async function currentWeatherApiFetch() {
         const response = await fetch(currentWeatherUrl);
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
             displayCurrentWeather(data);
         }
         
@@ -70,7 +70,6 @@ async function forecastApiFetch() {
         const response = await fetch(forecastUrl);
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
             displayForecast(data);
         }
     } catch (error) {
@@ -79,27 +78,50 @@ async function forecastApiFetch() {
 }
 
 function displayCurrentWeather(data) {
-    currentTemp.innerHTML = `${data.main.temp}&deg;F`;
+    currentTemp.innerHTML = `${Math.floor(data.main.temp)}&deg;F`;
     const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`
     let desc = data.weather[0].description;
     weatherIcon.setAttribute("src", iconsrc);
     weatherIcon.setAttribute("alt", desc);
     iconCaption.innerHTML = desc;
-    highTemp.innerHTML = `High: ${data.main.temp_max}&deg;`;
-    lowTemp.innerHTML = `Low: ${data.main.temp_min}&deg;`;
+    highTemp.innerHTML = `High: ${Math.floor(data.main.temp_max)}&deg;`;
+    lowTemp.innerHTML = `Low: ${Math.floor(data.main.temp_min)}&deg;`;
 }
 function displayForecast(data) {
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    firstDayTemp.innerHTML = `Tomorrow: ${data.list[7].main.temp}&deg;F`;
+    firstDayTemp.innerHTML = `Tomorrow: ${Math.floor(data.list[7].main.temp)}&deg;F`;
     const secondDay = new Date(data.list[15].dt_txt);
     const secondDayIndex = secondDay.getDay();
     const secondDayName = daysOfWeek[secondDayIndex];
-    secondDayTemp.innerHTML = `${secondDayName}: ${data.list[15].main.temp}&deg;F`;
+    secondDayTemp.innerHTML = `${secondDayName}: ${Math.floor(data.list[15].main.temp)}&deg;F`;
     const thirdDay = new Date(data.list[23].dt_txt);
     const thirdDayIndex = thirdDay.getDay();
     const thirdDayName = daysOfWeek[thirdDayIndex];
-    thirdDayTemp.innerHTML = `${thirdDayName}: ${data.list[23].main.temp}&deg;F`;
+    thirdDayTemp.innerHTML = `${thirdDayName}: ${Math.floor(data.list[23].main.temp)}&deg;F`;
 }
 
 currentWeatherApiFetch();
 forecastApiFetch();
+
+// Display random business from JSON
+
+const data = await getMemberData();
+const eliteMembers = data.members.filter((member) => member.membership == "Silver" || member.membership == "Gold");
+const cards = document.getElementById("best-businesses");
+
+function randomizeMembers(members) {
+    const randomArray = []
+    for (var i = 0; i < 3; i++) {
+        let randomNumber = Math.floor(Math.random() * members.length);
+        let randomMember = members[randomNumber];  
+        members.splice(randomNumber, randomNumber);
+        randomArray.push(randomMember);
+    }
+    return randomArray;
+}
+
+const randomElite = randomizeMembers(eliteMembers);
+
+displayMemberCards(randomElite, cards);
+
+
