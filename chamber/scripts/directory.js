@@ -3,7 +3,6 @@ const cards = document.querySelector("#business-cards");
 const listView = document.querySelector("#list-view");
 const gridView = document.querySelector("#grid-view");
 const tableBody = document.querySelector("tbody");
-const currentUrl = window.location.href;
 
 // Adding updated date and current year
 const today = new Date();

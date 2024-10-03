@@ -47,45 +47,40 @@
         border-radius: 7px;
     }
 
-    #business-cards {
-        margin: 0 auto;
-        grid-column: 1/4;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-        background-color: var(--header-text-c);
+    #home {
+        margin: 20px;
+        margin-left: 10vw;
     }
 
-    .card {
-        width: 400px;
-        border: solid 1px var(--secondary-color);
-        padding: 20px;
-        margin: 20px;
-        justify-self: center;
-        text-align: center;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    #hero-img img {
+        margin: 0 auto;
     }
-    
-    .card h2 {
-        padding: 10px;
-        font-family: var(--business-title-font);
-        font-weight: 600;
+    #join-link {
+        margin-bottom: 25vh;
     }
-    
-    .card p {
-        padding: 5px;
-        font-family: var(--business-text-font);
+    #join-link:hover {
+        margin-bottom: 26vh;
+        transition: .5s;
     }
-    .car p, .card a {
-        font-family: var(--business-text-font);
+
+    #main-view-cards {
+        display: grid;
+        grid-template-columns: 38vw 21vw 21vw;
+        justify-content: center;
     }
-    
-    #pickleball {
-        width: 230px;
-        height: 80px;
+
+    #events {
+        width: 37vw;
+        height: 30vh;
+        grid-row: 1/2;
     }
-    #murray-rec {
-        height: 100px;
-        width: 320px;
+    #current-weather {
+        width: 20vw;
+        grid-row: 1/2;
+    }
+    #forecast {
+        width: 20vw;
+        height: 30vh;
     }
 
     footer {
