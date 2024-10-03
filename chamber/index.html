@@ -36,11 +36,13 @@
         </nav>
     </header>
     <main>
-        <picture id="hero-img">
-            <source srcset="images/hero.webp" media="(max-width: 1000px)">
-            <img src="images/hero-big.webp" alt="Murray Utah" loading="lazy" width="1150">
+        <div id="hero-img">
+            <picture>
+                <source srcset="images/hero.webp" media="(max-width: 1000px)">
+                <img src="images/hero-big.webp" alt="Murray Utah" loading="lazy" width="1150">
+            </picture>
             <a id="join-link" href="#">Join</a>
-        </picture>
+        </div>
         <h2 id="home">Home</h2>
         <div id="main-view-cards">
             <div id="events">
@@ -49,7 +51,7 @@
             <div id="current-weather">
                 <h2>Current Weather</h2>
                 <figure>
-                    <img id="weather-icon" src="" alt="">
+                    <img id="weather-icon" src="#" alt="">
                 </figure>
                 <ul id="current-weather-list">
                     <li id="current-temp"></li>
