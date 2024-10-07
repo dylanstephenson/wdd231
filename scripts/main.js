@@ -16,8 +16,8 @@ hamButton.addEventListener('click', () => {
 })
 
 // Course Array
-const courseBox = document.getElementById("courses");
 
+const courseBox = document.getElementById("courses")
 const courses = [
     {
         subject: 'CSE',
@@ -101,35 +101,20 @@ const courses = [
 const initialCredits = 0
 const totalCredits = courses.reduce(function (acc, obj) {return acc + obj.credits; }, initialCredits);
 
-function setCourses(courseList) {
-    courseList.forEach(function (course) {
-        if (course.completed) {
-            courseBox.innerHTML += `<p class="completed">${course.subject}${course.number}</p>`
-            // console.log(courses[i].completed)
-        }
-        else {
-            courseBox.innerHTML += `<p class="not-completed">${course.subject}${course.number}</p>`
-            // console.log(courses[i].completed)
-        }
-    })
-    courseBox.innerHTML += `<span>Credits Needed to Complete Certificate: ${totalCredits}</span>`
-}
 const wddCourses = courses.filter((course) => course.subject == 'WDD')
 const cseCourses = courses.filter((course) => course.subject == 'CSE')
 
-setCourses(courses)
-
 document.querySelector("#all").addEventListener('click', () => {
     courseBox.innerHTML = ''
-    setCourses(courses)
+    displayCourses(courses)
 })
 document.querySelector("#CSE").addEventListener('click', () => {
     courseBox.innerHTML = ''
-    setCourses(cseCourses)
+    displayCourses(cseCourses)
 })
 document.querySelector("#WDD").addEventListener('click', () => {
     courseBox.innerHTML = ''
-    setCourses(wddCourses)
+    displayCourses(wddCourses)
 })
 
 // Adding weather to course page for OpenWeatherAPI assignment
@@ -159,3 +144,57 @@ function displayWeatherData(data) {
 }
 
 getApiData();
+
+// Adding modal functionality
+
+// const closeButton = document.querySelector("#close-modal");
+// const moSubject = document.querySelector("#course-details h2");
+// const moTitle = document.querySelector("course-details h3");
+// const moCredits = document.getElementById("modal-credits");
+// const moCertificate = document.getElementById("modal-certificate");
+// const moDescription = document.getElementById("modal-description");
+// const moTech = document.getElementById("modal-tech");
+
+
+const displayCourseDetails = (course) => {
+    const modal = document.getElementById("course-details");
+    modal.innerHTML = `
+    <button id="close-modal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+    modal.showModal();
+    const closeModal = document.querySelector("#close-modal");
+    closeModal.addEventListener('click', () => {
+        modal.close();
+    });
+}
+
+function displayCourses(courseList) {
+    courseList.forEach(course => {
+        const courseButton = document.createElement("button");
+        if (course.completed) {
+            courseButton.classList.add("completed")
+            // console.log(courses[i].completed)
+        }
+        else {
+            courseButton.classList.add("not-completed")
+            // console.log(courses[i].completed)
+        }
+        courseButton.innerHTML = `${course.subject}${course.number}`;
+        courseButton.addEventListener("click", () => {displayCourseDetails(course)
+        });
+        courseBox.appendChild(courseButton);
+
+       
+    })
+    courseBox.innerHTML += `<span>Credits Needed to Complete Certificate: ${totalCredits}</span>`
+}
+
+displayCourses(courses)
+
+
