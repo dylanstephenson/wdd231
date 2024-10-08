@@ -17,6 +17,18 @@ hamButton.addEventListener('click', () => {
 
 // Course Array
 
+async function getCourses() {
+    const response = await fetch("data/courses.json")
+    if (response.ok) {
+        const data = await response.json();
+        displayCourses(data);
+
+        return data
+    } else {
+        throw Error(await response.txt)
+    }
+}
+
 const courseBox = document.getElementById("courses")
 const courses = [
     {
@@ -177,6 +189,7 @@ const displayCourseDetails = (course) => {
 function displayCourses(courseList) {
     courseList.forEach(course => {
         const courseButton = document.createElement("button");
+        courseButton.innerHTML = `${course.subject}${course.number}`;
         if (course.completed) {
             courseButton.classList.add("completed")
             // console.log(courses[i].completed)
@@ -185,16 +198,12 @@ function displayCourses(courseList) {
             courseButton.classList.add("not-completed")
             // console.log(courses[i].completed)
         }
-        courseButton.innerHTML = `${course.subject}${course.number}`;
-        courseButton.addEventListener("click", () => {displayCourseDetails(course)
-        });
+        courseButton.addEventListener("click", () => {displayCourseDetails(course)});
         courseBox.appendChild(courseButton);
-
-       
     })
-    courseBox.innerHTML += `<span>Credits Needed to Complete Certificate: ${totalCredits}</span>`
+    const creditAmount = `<span>Credits Needed to Complete Certificate: ${totalCredits}</span>`
+    courseBox.appendChild(creditAmount);
+    // courseBox.innerHTML += `<span>Credits Needed to Complete Certificate: ${totalCredits}</span>`
 }
 
-displayCourses(courses)
-
-
+getCourses();
