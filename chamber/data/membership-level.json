@@ -1,0 +1,45 @@
+{
+    "levels": [
+    {
+        "name": "Non-Profit Level",
+        "cost": "0",
+        "benefits": [
+            "Access to Event Calendar",
+            "Business Directory Listing",
+            "Basic Discount Availability"
+        ]
+    },
+    {
+        "name": "Standard Level",
+        "cost": "100",
+        "benefits": [
+            "Access to Event Calendar",
+            "Business Directory Listing",
+            "Basic Discount Availability",
+            "Tier 1 Business Training and Webinar Access"
+        ]
+    },
+    {
+        "name": "Silver Level",
+        "cost": "250",
+        "benefits": [
+            "Standard Benefits",
+            "Business Directory Highlight",
+            "Spotlight on Home Page",
+            "Tier 2 Business Training and Webinar Access",
+            "Promotional and Marketing Support"
+        ]
+    },
+    {
+        "name": "gold Level",
+        "cost": "500",
+        "benefits": [
+            "Standard and Silver Benefits",
+            "Premium Discount Availability",
+            "Tier 3 Business Training and Webinar Access",
+            "Sponsorship Opportunities",
+            "Gold-Member Only Event Calendar"
+        ]
+    }
+    ]
+}
