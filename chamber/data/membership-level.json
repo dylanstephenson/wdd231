@@ -1,5 +1,5 @@
-{
-    "levels": [
+
+[
     {
         "name": "Non-Profit Level",
         "cost": "0",
@@ -41,5 +41,4 @@
             "Gold-Member Only Event Calendar"
         ]
     }
-    ]
-}
+]
