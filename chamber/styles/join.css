@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primary-color: #799c40;
+    --secondary-color: #4c6226;
+    --header-text-c: white;
+    --subheader-text-c: #9d6841;
+    --header-font: "Dosis", sans-serif;
+    --button-font: "Concert One", sans-serif;
+    --business-title-font: "Poppins", sans-serif;
+    --business-text-font: "Halant", serif;
+}
+header {
+    display: grid;
+    grid-template-columns: 150px 100px auto;
+    color: var(--header-text-c);
+    background-color: var(--primary-color);
+    height: 145px;
+    width: 100%;
+}
+#logo {
+    align-self: center;
+    padding: 10px;
+}
+#logo img {
+    box-shadow: rgba(55, 38, 38, 0.24) 0px 3px 8px;
+}
+
+header h1 {
+    align-self: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-family: var(--header-font);
+    font-size: 1.3rem;
+}
+
+#menuButton {
+    font-size: 3rem;
+    background: none;
+    border: none;
+    color: var(--header-text-c);
+    cursor: pointer;
+    text-align: right;
+    padding: .25rem 2vw;
+    align-self:start;
+}
+#menuButton::before {
+    content: "☰"
+}
+#menuButton.open::before {
+    content: "x"
+}
+
+nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease-out;
+    background-color: var(--secondary-color);
+    width: 100vw;
+    list-style-type: none;
+    z-index: 100;
+}
+nav ul {
+    overflow: hidden;
+}
+nav.open {
+    grid-template-rows: 1fr;
+    background-color: var(--secondary-color);
+    width: 100vw;
+}
+
+ul.menuLinks li a {
+    display: block;
+    text-decoration: none;
+    color: var(--header-text-c);
+    font-size: 1.5rem;
+    font-family: var(--business-title-font);
+    font-weight: 600;
+    padding: 10px;
+}
+ul.menuLinks li a:hover {
+    background-color:#6b8e2d;
+}
+.wayfinding, .wayfinding:hover {
+    background-color: #6b8e2d!important;
+    padding: 10px;
+}
+
+h2 {
+    font-family: var(--business-title-font);
+    font-size: 1.6rem;
+    margin: 10px;
+    text-align: center;
+}
+
+form {
+    margin: 1rem 2%;
+  
+    label {
+      display: block;
+      font-size: 1rem;
+      color: var(--subheader-text-c);
+      font-family: var(--business-text-font);
+      font-weight: bold;
+      padding-top: .2rem;
+      margin-top: 1rem;
+      margin-left: 12vw;
+    }
+    h3 {
+      text-align: center;  
+      font-size: 1.3rem;
+      font-family: var(--business-title-font);
+      color: var(--secondary-color);
+      margin-top: 1.5rem;
+      margin-bottom: .8rem;
+      border-bottom: 1px solid #eee;
+    }
+  
+    input[type=text],
+    input[type=tel],
+    input[type=date],
+    input[type=email]{
+      display: block;
+      padding: .3rem;
+      border: 1px solid #999;
+      border-radius: 4px;
+      border-left-width: 5px;
+      border-left-color:var(--secondary-color);
+      font-size: 1rem;
+      color: #3D405B;
+      width: 250px;
+    }
+    input[type=radio]{
+        margin-left: 12vw;
+        margin-right: 6px;
+    }
+  
+    input:required {border-left-color: rgb(168, 15, 15);}
+    input:focus {border-left-color: var(--secondary-color); outline:none;}
+    input:required:valid{border-left-color: var(--primary-color);}
+  
+    input[type=submit] {
+      border: none;
+      text-align: center;
+      font-family: var(--button-font);
+      background-color: var(--secondary-color);
+      color: white;
+      border-radius: 1rem;
+      padding: .75rem 1.5rem;
+      margin: 2rem 0;
+      margin-top: 2rem;
+      margin-left: 11vw;
+      font-size: 1.5rem;
+      -webkit-appearance: none;
+      appearance: none;
+      transition: .5s;
+    }
+    input[type=submit]:hover {
+        cursor: pointer;
+        padding: .85rem 1.6rem;
+        transition: .3s;
+        background-color: var(--header-text-c);
+        color: var(--secondary-color);
+        border: 3px solid var(--secondary-color);
+    }
+  }
+
+#membership-cards {
+    text-align: center;
+}
+
+.membership-card {
+    border: 3px solid var(--secondary-color);
+    margin: 10px;
+    padding: 20px;
+    font-family: var(--business-text-font);
+    border-radius: 8px;
+    font-size: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.membership-card button {
+    padding: 8px;
+    margin: 10px;
+    font-size: 1rem;
+    height: 44px;
+    color: var(--header-text-c);
+    background-color: var(--secondary-color);
+    font-family: var(--business-title-font);
+    border-radius: 15px;
+    cursor: pointer;
+}
+.membership-card button:active {
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+#standard-card {
+    background-color: #8bbd3b;
+}
+#silver-card {
+    background-color: lightgrey;
+}
+#gold-card {
+    background-color: rgb(255, 195, 42);
+}
+
+footer {
+    display: block;
+    background-color: var(--primary-color);
+    color: var(--header-text-c);
+    font-family: var(--header-font);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#social-links {
+    display: flex;
+    align-items: center;
+}
+
+footer p {
+    padding: 8px;
+}

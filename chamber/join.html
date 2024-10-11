@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unofficial Murray chamber of commerce Home page for WDD231 project.">
+    <meta name="author" content="Dylan Stephenson">
+    <meta property="og:title" content="Murray Chamber of Commerce Join page">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="My Murray Chamber of Commerce join form for WDD 231 project.">
+    <meta property="og:image" content="https://i0.wp.com/utahagenda.com/wp-content/uploads/2022/08/b4f9f-murray-park-utah-1038-20180504-104953.jpg?resize=1038%2C576&ssl=1">
+    <meta property="og:url" content="https://dylanstephenson.github.io/wdd231/chamber">
+    <title>Join Us - Murray Chamber of Commerce</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/large-join.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Halant:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <header>
+        <figure id="logo">
+            <img src="images/logo.webp" alt="logo" loading="eager" height="120" width="120">
+        </figure>
+        <h1>Murray <br>Chamber of Commerce</h1>
+        <button id="menuButton" title="Hamburger Menu"></button>
+        <nav id="animateMe">
+            <ul class="menuLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a class="wayfinding" href="join.html">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 id="application-header">Membership Application</h2>
+
+        <form method="GET" action="thankyou.html" id="form-body">
+            <label>First Name: <input type="text" required name="first" autocomplete="given-name" title="Your First Name"></label>
+            <label>Last Name: <input type="text" required name="last" autocomplete="family-name" title="Your Last Name"></label>
+            <label>Organization Title: <input type="text" name="organization-title" autocomplete="organization-title" title="Your Organization Title"></label>
+            <label>Email: <input type="email" required name="email" autocomplete="email" title="Your Email" placeholder="joinus@murraypark"></label>
+            <label>Phone #: <input type="tel" required name="phone" autocomplete="tel" title="Your Phone Number"></label>
+            <label>Organization Name: <input type="text" required name="organization" autocomplete="organization" title="Name of Your Organization"></label>
+            <label>Organization Description: <input type="text" title="Describe Your Organization" name="organization-description"></label>
+
+            <h3>Select Membership Level</h3>
+            <label><input type="radio" name="membership" value="NP">NP Membership</label>
+            <label><input type="radio" name="membership" checked value="Standard">Standard Membership</label>
+            <label><input type="radio" name="membership" value="Silver">Silver Membership</label>
+            <label><input type="radio" name="membership" value="Gold">Gold Membership</label>
+
+            <label><input type="hidden" name="timestamp" id="timestamp"></label>
+            <input type="submit" value="Request Membership">
+        </form>
+        <h2 id="memberships-header">Membership Levels</h2>
+        <div id="membership-cards">
+            <div class="membership-card" id="np-card">
+                <h3>Non-Profit Level</h3>
+                <button id="np-button">Learn More</button>
+            </div>
+            <div class="membership-card" id="standard-card">
+                <h3>Standard Level</h3>
+                <button id="standard-button">Learn More</button>
+            </div>
+            <div class="membership-card" id="silver-card">
+                <h3>Silver Level</h3>
+                <button id="silver-button">Learn More</button>
+            </div>
+            <div class="membership-card" id="gold-card">
+                <h3>Gold Level</h3>
+                <button id="gold-button">Learn More</button>
+            </div>
+            <dialog class="membership-level" id="non-profit"></dialog>
+            <dialog class="membership-level" id="standard"></dialog>
+            <dialog class="membership-level" id="silver"></dialog>
+            <dialog class="membership-level" id="gold"></dialog>
+        </div>
+    </main>
+    <footer>
+        <div id="chamber-address">
+            <p><strong>Murray Chamber of Commerce</strong></p>
+            <p>141 E. 5600 S., Suite 300</p>
+            <p>Murray, UT 84107</p>
+            <p>801.263.2632</p>
+        </div>
+        <div id="social-links">
+            <a href="https://facebook.com" target="_blank">
+                <figure>
+                    <img src="images/fbook-icon.png" alt="Facebook" loading="lazy" width="80" height="80">
+                </figure>
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <figure>
+                    <img src="images/insta-icon.png" alt="Instagram" loading="lazy" width="80" height="80">
+                </figure>
+            </a>
+            <a href="https://x.com" target="_blank">
+                <figure>
+                    <img src="images/x-icon.png" alt="Twitter / X" loading="lazy" width="72" height="72">
+                </figure>
+            </a>
+        </div>
+        <div id="project-information">
+            <p>WDD231 Class Project</p>
+            <p>Dylan Stephenson</p>
+            <p>©<span id="currentyear"></span> Murray Chamber of Commerce</p>
+            <p id="lastModified">
+
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

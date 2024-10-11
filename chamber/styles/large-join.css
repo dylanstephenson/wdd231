@@ -1,0 +1,65 @@
+@media only screen and (min-width: 1000px) {
+    header {
+        display: grid;
+        grid-template-columns: 140px 400px 1fr;
+        color: var(--header-text-c); 
+        background-color: var(--primary-color); 
+    }
+    #logo {
+        padding: 10px;
+    }
+    #logo img {
+        box-shadow: rgba(55, 38, 38, 0.24) 0px 3px 8px;
+        
+    }
+    header h1 {
+        align-self: center;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        font-family: var(--header-font);
+        font-size: 2rem;
+    }
+    #menuButton {
+        display: none;
+    }
+    #animateMe, #animateMe.open {
+        display: flex;
+        justify-content: space-around;
+        background-color: var(--primary-color);
+        width: auto;
+        height: 140px;
+    }
+
+    ul.menuLinks {
+        list-style-type: none;
+        display: flex;
+        align-self: center;
+        gap: 4vw;
+    }
+    
+    ul.menuLinks li a:hover {
+        color: #c1f370;
+        background-color: var(--primary-color);
+    }
+    .wayfinding, .wayfinding:hover {
+        background-color: var(--secondary-color)!important;
+        padding: 10px;
+        border-radius: 7px;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        text-align: left;
+    }
+    #social-links {
+        display: flex;
+        align-items: center;
+        margin-left: 50px;
+    }
+
+    footer p {
+        padding: 6px;
+        margin-left: 50px;
+    }
+}
