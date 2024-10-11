@@ -56,7 +56,7 @@ function displayModal(data, modal, index) {
     const modalName = document.createElement("h2"); 
     modalName.innerHTML = data[index].name;
     const modalCost = document.createElement("p");
-    modalCost.innerHTML = data[index].cost;
+    modalCost.innerHTML = `$${data[index].cost} Annually`;
     const modalBenefits = document.createElement("h3")
     modalBenefits.innerHTML = "Benefits";
     const modalList = document.createElement("ul");
