@@ -157,15 +157,7 @@ function displayWeatherData(data) {
 
 getApiData();
 
-// Adding modal functionality
-
-// const closeButton = document.querySelector("#close-modal");
-// const moSubject = document.querySelector("#course-details h2");
-// const moTitle = document.querySelector("course-details h3");
-// const moCredits = document.getElementById("modal-credits");
-// const moCertificate = document.getElementById("modal-certificate");
-// const moDescription = document.getElementById("modal-description");
-// const moTech = document.getElementById("modal-tech");
+// Add Modal
 
 
 const displayCourseDetails = (course) => {

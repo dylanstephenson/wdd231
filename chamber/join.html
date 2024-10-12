@@ -41,11 +41,11 @@
         <form method="GET" action="thankyou.html" id="form-body">
             <label>First Name: <input type="text" required name="first" autocomplete="given-name" title="Your First Name"></label>
             <label>Last Name: <input type="text" required name="last" autocomplete="family-name" title="Your Last Name"></label>
-            <label>Organization Title: <input type="text" name="organization-title" autocomplete="organization-title" title="Your Organization Title"></label>
             <label>Email: <input type="email" required name="email" autocomplete="email" title="Your Email" placeholder="joinus@murraypark"></label>
             <label>Phone #: <input type="tel" required name="phone" autocomplete="tel" title="Your Phone Number"></label>
+            <label>Organization Title: <input type="text" name="title" autocomplete="organization-title" title="Your Organization Title"></label>
             <label>Organization Name: <input type="text" required name="organization" autocomplete="organization" title="Name of Your Organization"></label>
-            <label>Organization Description: <input type="text" title="Describe Your Organization" name="organization-description"></label>
+            <label>Organization Description: <input type="text" title="Describe Your Organization" name="description"></label>
 
             <h3>Select Membership Level</h3>
             <label><input type="radio" name="membership" value="NP">NP Membership</label>
@@ -53,8 +53,8 @@
             <label><input type="radio" name="membership" value="Silver">Silver Membership</label>
             <label><input type="radio" name="membership" value="Gold">Gold Membership</label>
 
-            <label><input type="hidden" name="timestamp" id="timestamp"></label>
-            <input type="submit" value="Request Membership">
+            <label><input type="hidden" name="timestamp" id="timestamp" value=""></label>
+            <label><input type="submit" value="Request Membership"></label>
         </form>
         <h2 id="memberships-header">Membership Levels</h2>
         <div id="membership-cards">

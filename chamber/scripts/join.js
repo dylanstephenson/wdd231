@@ -21,7 +21,6 @@ async function getLevelData() {
     const response = await fetch(url);
     if (response.ok) {
         const data = await response.json();
-        console.log(data);
         npButton.addEventListener("click", () => {
             displayModal(data, nonProfitMem, 0);
         })
@@ -80,3 +79,23 @@ function displayModal(data, modal, index) {
 }
 
 getLevelData();
+
+// Create Timestamp
+
+function getTime() {
+    const date = new Date();
+    const formattedDate = date.toLocaleString('en-US', {
+        weekday: 'long',
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: true
+    })
+    return formattedDate;
+}
+
+const timestamp = document.querySelector("#timestamp")
+timestamp.value = getTime();
