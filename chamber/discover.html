@@ -3,55 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Unofficial Murray chamber of commerce directory page for WDD231 project. This is will be the directory of business listed on my site.">
+    <meta name="description" content="Unofficial Murray chamber of commerce Discover page for WDD231 project.">
     <meta name="author" content="Dylan Stephenson">
-    <meta property="og:title" content="Murray Chamber of Commerce Directory">
+    <meta property="og:title" content="Murray Chamber of Commerce Discover">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="My Chamber of Commerce directory page for WDD 231 project.">
+    <meta property="og:description" content="My Murray Chamber of Commerce discover page for WDD 231 project.">
     <meta property="og:image" content="https://i0.wp.com/utahagenda.com/wp-content/uploads/2022/08/b4f9f-murray-park-utah-1038-20180504-104953.jpg?resize=1038%2C576&ssl=1">
-    <meta property="og:url" content="https://dylanstephenson.github.io/wdd231/chamber/directory.html">
-    <title>Directory - Murray Chamber of Commerce</title>
+    <meta property="og:url" content="https://dylanstephenson.github.io/wdd231/chamber">
+    <title>Discover - Murray Chamber of Commerce</title>
     <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles/directory.css">
-    <link rel="stylesheet" href="styles/large-directory.css">
-    <link rel="stylesheet" href="styles/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/large-main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Halant:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="scripts/directory.mjs" type="module"></script>
-    <script src="scripts/business-api.mjs" type="module"></script>
-
+    <script src="scripts/main.mjs" type="module"></script>
 </head>
 <body>
     <header>
         <figure id="logo">
-            <img src="images/logo.webp" alt="logo" loading="lazy" height="120" width="120">
+            <img src="images/logo.webp" alt="logo" loading="eager" height="120" width="120">
         </figure>
         <h1>Murray <br>Chamber of Commerce</h1>
         <button id="menuButton" title="Hamburger Menu"></button>
         <nav id="animateMe">
             <ul class="menuLinks">
                 <li><a href="index.html">Home</a></li>
-                <li><a class="wayfinding" href="directory.html">Directory</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a class="wayfinding" href="discover.html">Discover</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="card-heading">
-            <h2 id="partners">Work with our Partners</h2>
-            <button id="grid-view" title="Grid View"><i class="fa-solid fa-grip"></i></button>
-            <button id="list-view" title="List View"><i class="fa-solid fa-list"></i></button>
-        </section>
-        <div id="business-cards">
-        </div>
-        <div>
-            <table>
-                <tbody></tbody>
-            </table>
-        </div>
-    </main>
     <footer>
         <div id="chamber-address">
             <p><strong>Murray Chamber of Commerce</strong></p>

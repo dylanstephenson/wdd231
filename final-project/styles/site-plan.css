@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primary-color: #220901;
+    --header-color: linear-gradient(43deg, #BC3908 0%, #941B0C 46%, #621708 100%);
+    --text-color: #F6AA1C;
+    --secondary-color: #621708;
+    --tertiary-color: #BC3908;
+    --header-font: "Bebas Neue", sans-serif;
+    --subheader-font: "Afacad Flux", sans-serif;
+    --text-font: "Rubik", sans-serif;
+}
+
+body {
+    background: var(--primary-color);
+    color: var(--text-color);
+}
+header {
+    width: 65vw;
+    padding: 15px;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--header-color);
+    color: var(--text-color);
+
+}
+main {
+    width: 65vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+h1, h2 {
+    font-family: var(--header-font);
+    font-kerning: normal;
+}
+h1{font-size: 2.5rem}
+h3 {
+    font-family: var(--subheader-font);
+    font-size: 1.6rem;
+}
+
+#about, #colors, #typography, #wireframes {
+    border: 2px solid var(--tertiary-color);
+    padding: 10px;
+    margin: 10px;
+    box-shadow: rgba(246, 170, 28, 0.35) 0px 5px 15px;
+}
+#about h2, #colors h2, #typography h2, #wireframes h2{
+    font-size: 2.2rem;
+    padding: 5px;
+}
+
+#about, #colors, #typography {
+    grid-column: 1/2;
+}
+
+#about ul, #colors ul, #typography ul {
+    list-style: none;
+}
+#about {
+    grid-row: 1/2;
+    padding: 5px;
+}
+
+#about h3 {
+    margin-left: 7px;
+}
+
+#typography {
+    grid-row: 2/3;
+}
+#typoh1, #typography h3, #typography p {
+    text-align: center;
+}
+#typography #typoh1{font-size: 2rem;}
+
+#colors {
+    grid-row: 3/4;
+    background-color: white;
+}
+
+li, p {
+    padding: 5px;
+    margin-left: 10px;
+    font-family: var(--text-font);
+}
+
+#color-header {color: var(--primary-color);}
+#licorice {color: var(--primary-color)}
+#penn-red {color: var(--header-color)}
+#rust {color: var(--tertiary-color)}
+#orange {color: var(--text-color); background: var(--primary-color)}
+
+
+#wireframes {
+    grid-row: 1/4;
+    margin-left: 15px;
+}
+#mobile, #mobile-wireframe, #desktop, #desktop-wireframe {
+    text-align: center;
+    margin: 10px;
+}
+
+
+
