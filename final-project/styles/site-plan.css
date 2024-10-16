@@ -84,14 +84,15 @@ h3 {
 
 li, p {
     padding: 5px;
+    margin-top: 1px;
     margin-left: 10px;
     font-family: var(--text-font);
 }
 
 #color-header {color: var(--primary-color);}
 #licorice {color: var(--primary-color)}
-#penn-red {color: var(--header-color)}
-#rust {color: var(--tertiary-color)}
+#penn-red {background: var(--header-color); color: var(--text-color)}
+#rust {border: 2px solid var(--tertiary-color); color: var(--tertiary-color)}
 #orange {color: var(--text-color); background: var(--primary-color)}
 
 
