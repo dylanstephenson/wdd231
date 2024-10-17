@@ -303,6 +303,27 @@ li {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 }
+#local-storage {
+    text-align: center;
+    background-color: rgb(246, 238, 151);
+    border: 2px solid rgb(239, 225, 67);
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: var(--business-text-font);
+    width: 280px;
+    animation: fadein 3s ease;
+}
+@keyframes fadein {
+from{
+    opacity: 0;
+}
+to{
+    opacity: 1;
+}
+}
+
 
 #murray-pics {
     text-align: center;

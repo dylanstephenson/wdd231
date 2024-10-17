@@ -103,6 +103,36 @@
         background-color: var(--header-text-c);
     }
 
+    #discover-grid {
+        display: grid;
+        grid-template-columns: 35vw 1fr;
+    }
+    #discover-cards div {
+        margin-top: 20px;
+        width: 30vw;
+    }
+
+    #job-list a:hover {
+        color: white;
+    }
+
+    #demographics:hover {
+        width: 290px;
+        height: 190px;
+        margin-top: 5px;
+        transition: .2s;
+    }
+
+    #murray-pics {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #murray-pics figure img:hover {
+        width: 310px;
+        filter: saturate(65%);
+        transition: .5s;
+    }
+
     footer {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
