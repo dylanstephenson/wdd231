@@ -91,6 +91,7 @@ ul.menuLinks li a:hover {
 
 main {
     min-height: 79vh;
+    position:relative;
 }
 
 #headline{
@@ -334,10 +335,11 @@ option {
 
 footer {
     background: var(--header-color);
-    padding: 15px;
     margin-top: 15px;
     font-family: var(--text-font);
+    padding: 10px;
 }
+
 
 
 
