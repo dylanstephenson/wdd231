@@ -109,7 +109,7 @@ const allMovies = [
 ]
 
 async function getData(movieId) {
-    const url = `http://www.omdbapi.com/?i=${movieId}&plot=short&apikey=3d93d6d5`
+    const url = `https://www.omdbapi.com/?i=${movieId}&plot=short&apikey=3d93d6d5`
     try {
         const response = await fetch(url);
         if (response.ok) {
