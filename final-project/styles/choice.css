@@ -1,0 +1,156 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #220901;
+    --header-color: linear-gradient(43deg, #BC3908 0%, #941B0C 46%, #621708 100%);
+    --subheader-color: linear-gradient(43deg, #621708 0%, #34110a 46%, #3a1103 100%);
+    --text-color: #F6AA1C;
+    --secondary-color: #621708;
+    --tertiary-color: #BC3908;
+    --header-font: "Bebas Neue", sans-serif;
+    --subheader-font: "Afacad Flux", sans-serif;
+    --text-font: "Rubik", sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+header {
+    display: grid;
+    max-width: 100vw;
+    grid-template-columns: 120px, auto;
+    background: var(--header-color);
+}
+
+#logo-img {
+    padding: 10px;
+    width: 100px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+#menuButton {
+    grid-column:1/3;
+    grid-row: 1/2;
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    color: var(--header-text-c);
+    cursor: pointer;
+    text-align: left;
+    padding: .25rem 4vw;
+    align-self: center;
+    justify-self: end;
+}
+#menuButton::before {
+    content: "☰"
+}
+#menuButton.open::before {
+    content: "x"
+}
+
+nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease-out;
+    background-color: var(--secondary-color);
+    width: 100vw;
+    list-style-type: none;
+    z-index: 100;
+    font-family: var(--header-font);
+}
+nav ul {
+    overflow: hidden;
+}
+nav.open {
+    grid-template-rows: 1fr;
+    width: 100vw;
+}
+
+ul.menuLinks li a {
+    display: block;
+    text-decoration: none;
+    color: var(--header-text-c);
+    font-size: 1.5rem;
+    font-family: var(--business-title-font);
+    font-weight: 600;
+    padding: 10px;
+}
+ul.menuLinks li a:hover {
+    background-color: var(--tertiary-color);
+}
+
+.wayfinding {
+    background-color: #941B0C;
+}
+
+.sidebar-block {
+    text-align: center;
+    padding: 10px;
+}
+h3 {
+    font-family: var(--subheader-font);
+    font-size: 1.8rem;
+}
+button {
+    padding: 7px;
+    margin: 5px;
+    background: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 3px;
+}
+
+figure {
+    text-align: center;
+    margin: 30px;
+}
+
+figure img {
+    box-shadow: rgba(246, 170, 28, 0.35) 0px 5px 15px;
+}
+
+dialog {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+dialog p {
+    font-family: var(--text-font);
+    font-size: 1rem;
+    padding: 10px;
+    text-align: left;
+}
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / 0.7);
+}
+
+#close-modal {
+    width: 44px;
+    height: 44px;
+    font-size: 1.8rem;
+    font-family: var(--text-font);
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--text-color);
+    text-align: center;
+    position: absolute;
+    right: 2px;
+}
+
+footer {
+    background: var(--header-color);
+    padding: 15px;
+    margin-top: 15px;
+    font-family: var(--text-font);
+}

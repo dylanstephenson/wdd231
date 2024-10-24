@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMarathon - Dylan Stephenson WDD231 Final Project</title>
+    <meta name="description" content="This is the home page for my final project site, CineMarathon">
+    <meta name="author" content="Dylan Stephenson">
+    <meta property="og:title" content="CineMarathon - Dylan Stephenson WDD231 Final Project">
+    <meta property ="og:type" content="website">
+    <meta property ="og:image" content="https://choosewashingtonstate.com/wp-content/uploads/2019/03/blog-pasco1.jpg">
+    <meta property="og:url" content="https://dylanstephenson.github.io/wdd231/final-project">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/large-main.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux&family=Bebas+Neue&family=Rubik&display=swap" rel="stylesheet">
+    <script src="scripts/main.mjs" type="module"></script>
+</head>
+<body>
+    <header>
+        <figure id="logo-img">
+            <a href="index.html"><img src="images/logo.png" alt="logo" width="100"></a>
+        </figure>
+        <button id="menuButton" title="Hamburger Menu"></button>
+        <nav id="animateMe">
+            <ul class="menuLinks">
+                <li><a href="index.html" class="wayfinding">Home</a></li>
+                <li><a href="top-movies.html">IMDB's Choice</a></li>
+                <li><a href="dylans-choice.html">Dylan's Choice</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="hero-box">
+            <div id="hero-text">
+                <figure id="hero-img">
+                    <img src="images/movie-night.webp" alt="movie night picture" loading="eager" width="375">
+                </figure>
+                <h2 id="headline">Need help planning movie night?</h2>
+                <p class="headline-text">
+                    CineMarathon provides a list of IMDB's top 5 movies from the last 5 years with a brief synopsis, actor list, and IMDB rating for each movie.
+                    I have also created my own list of favorite movies that you can choose from. 
+                </p> 
+                <p class="headline-text"> 
+                    Have a favorite movie that's not on the top rated movies or on my list? Click "Suggest Movie" below to submit your own favorite 
+                    movie. Or, select "Pick For Me" and let our random movie generator pick something for you from the list! 
+                </p>
+                <div id="button-div">
+                    <button id="suggest-button">Suggest Movie</button>
+                    <dialog id="form-modal">
+                        <h2 id="application-header">Movie Suggestion</h2>
+                        <form method="GET" action="thankyou.html" id="form-body">
+                            <label>First Name: <input type="text" required name="first" autocomplete="given-name" title="Your First Name"></label>
+                            <label>Last Name: <input type="text" required name="last" autocomplete="family-name" title="Your Last Name"></label>
+                            <label>Email: <input type="email" required name="email" autocomplete="email" title="Your Email" placeholder="Ilovemovies@movies.com"></label>
+                            <label>Movie Title: <input type="text" required name="title" title="Suggested Movie Title"></label>
+                            <label>Plot: <textarea title="Provide Movie Synopsis" name="description" id="description"></textarea></label>
+                            <label>Stars: <input type="text" name="actor-list" title="List three actors" placeholder="Provide three actors"></label>
+                            <label>IMDB Rating: <input type="text" name="imdb-rating" title="Copy rating from IMDB page"></label>
+                            <label>IMDB ID: <input type="text" required name="imdb-id" title="provide movie's IMDB id for quick reference" placeholder="tt0000000"></label>
+
+                            <h3>Select Genre</h3>
+                            <label id="genre">
+                                <select name="drop-down">
+                                    <option value disabled selected>Select the Genre</option>
+                                    <option value="Fantasy">Fantasy</option>
+                                    <option value="Comic-Book">Comic Book</option>
+                                    <option value="Action">Action</option>
+                                    <option value="Comedy">Comedy</option>
+                                    <option value="Horror">Horror</option>
+                                </select>
+                            </label>
+
+                            <label><input type="submit" value="Send Movie Suggestion"></label>
+                        </form>
+                    </dialog>
+                    <button id="random-button">Pick For Me</button>
+                    <div id="random-modal">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="random-movies">
+            <div id="critically-rated">
+                <h3 class="random-header">IMDB's Favorites</h3>
+            </div>
+            <div id="dylans-choice">
+                <h3 class="random-header">Dylan's Favorites</h3>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span>© Dylan Stephenson CineMarathon 2024</span>
+    </footer>
+</body>
+</html>

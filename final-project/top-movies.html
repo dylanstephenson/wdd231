@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Top Movies - CineMarathon</title>
+        <meta name="description" content="This is where I list the IMDB top 5 movies from the past 5 years">
+        <meta name="author" content="Dylan Stephenson">
+        <meta property="og:title" content="Top Movies - CineMarathon">
+        <meta property ="og:type" content="website">
+        <meta property ="og:image" content="https://choosewashingtonstate.com/wp-content/uploads/2019/03/blog-pasco1.jpg">
+        <meta property="og:url" content="https://dylanstephenson.github.io/wdd231/final-project/top-movies.html">
+        <link href="styles/top.css" rel="stylesheet">
+        <link href="styles/large-top.css" rel="stylesheet">
+        <link rel="icon" href="favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux&family=Bebas+Neue&family=Rubik&display=swap" rel="stylesheet">
+        <script src="scripts/top.mjs" type="module"></script>
+    </head>
+<body>
+    <header>
+        <figure id="logo-img">
+            <a href="index.html"><img src="images/logo.png" alt="logo" width="100"></a>
+        </figure>
+        <button id="menuButton" title="Hamburger Menu"></button>
+        <nav id="animateMe">
+            <ul class="menuLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="top-movies.html" class="wayfinding">IMDB's Choice</a></li>
+                <li><a href="dylans-choice.html">Dylan's Choice</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="sidebar-block">
+            <h3>Filter by Year</h3>
+            <button class="filter-buttons" id="button2023">2023</button>
+            <button class="filter-buttons" id="button2022">2022</button>
+            <button class="filter-buttons" id="button2021">2021</button>
+            <button class="filter-buttons" id="button2020">2020</button>
+            <button class="filter-buttons" id="button2019">2019</button>
+        </div>
+        <div class="movie-grid" id="top-movies"></div>
+    </main>
+    <footer>
+        <span>© Dylan Stephenson CineMarathon 2024</span>
+    </footer>
+</body>
+</html>
