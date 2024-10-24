@@ -15,6 +15,11 @@ const movies2019 = topMovieIds.slice(20);
 const button2023 = document.getElementById("button2023")
 button2023.addEventListener("click", () => {
     movieGrid.innerHTML = "";
+    button2022.removeAttribute("class")
+    button2021.removeAttribute("class")
+    button2020.removeAttribute("class")
+    button2019.removeAttribute("class")
+    button2023.setAttribute("class","button-wayfinding");
     movies2023.forEach(movieId => {
         displayPoster(movieGrid, movieId);
     })
@@ -23,6 +28,11 @@ button2023.addEventListener("click", () => {
 const button2022 = document.getElementById("button2022")
 button2022.addEventListener("click", () => {
     movieGrid.innerHTML = "";
+    button2023.removeAttribute("class")
+    button2021.removeAttribute("class")
+    button2020.removeAttribute("class")
+    button2019.removeAttribute("class")
+    button2022.setAttribute("class","button-wayfinding");
     movies2022.forEach(movieId => {
         displayPoster(movieGrid, movieId);
     })
@@ -31,6 +41,11 @@ button2022.addEventListener("click", () => {
 const button2021 = document.getElementById("button2021")
 button2021.addEventListener("click", () => {
     movieGrid.innerHTML = "";
+    button2022.removeAttribute("class")
+    button2023.removeAttribute("class")
+    button2020.removeAttribute("class")
+    button2019.removeAttribute("class")
+    button2021.setAttribute("class","button-wayfinding");
     movies2021.forEach(movieId => {
         displayPoster(movieGrid, movieId);
     })
@@ -39,6 +54,11 @@ button2021.addEventListener("click", () => {
 const button2020 = document.getElementById("button2020")
 button2020.addEventListener("click", () => {
     movieGrid.innerHTML = "";
+    button2022.removeAttribute("class")
+    button2021.removeAttribute("class")
+    button2023.removeAttribute("class")
+    button2019.removeAttribute("class")
+    button2020.setAttribute("class","button-wayfinding");
     movies2020.forEach(movieId => {
         displayPoster(movieGrid, movieId);
     })
@@ -47,6 +67,11 @@ button2020.addEventListener("click", () => {
 const button2019 = document.getElementById("button2019")
 button2019.addEventListener("click", () => {
     movieGrid.innerHTML = "";
+    button2022.removeAttribute("class")
+    button2021.removeAttribute("class")
+    button2020.removeAttribute("class")
+    button2023.removeAttribute("class")
+    button2019.setAttribute("class","button-wayfinding");
     movies2019.forEach(movieId => {
         displayPoster(movieGrid, movieId);
     })
