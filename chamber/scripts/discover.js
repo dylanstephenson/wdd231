@@ -34,6 +34,6 @@ function displaySinceLastVisit() {
     }
 }
 
-window.onload = (even) => {
+window.onload = (event) => {
     displaySinceLastVisit();
 }

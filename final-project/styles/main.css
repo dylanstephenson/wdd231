@@ -104,6 +104,10 @@ main {
     font-family: var(--text-font);
     padding: 15px;
 }
+
+#hero-img img {
+    width:100%;
+}
 #button-div{
     display: grid;
     grid-template-rows: 1fr;
@@ -324,6 +328,14 @@ option {
     margin-top: 20px;
     animation: fadein 4s ease;
 }
+#forms-submitted {
+    text-align: center;
+    font-family: var(--subheader-font);
+    font-size: 1.3rem;
+    margin-top: 20px;
+    animation: fadein 7s ease;
+}
+
 @keyframes fadein {
     from{
         opacity: 0

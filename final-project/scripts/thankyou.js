@@ -65,3 +65,27 @@ if(show("drop-down") != "") {
     genre.innerHTML = `<strong>GENRE:</strong> ${show("drop-down")}`
     movieDetails.appendChild(genre)
 }
+
+// Creating local storage to display how many movies have been suggested through the form.
+
+const submittedMessage = document.querySelector("#forms-submitted")
+const formNumber = Number(localStorage.getItem("form-number") ?? 1);
+const newNumber = formNumber + 1;
+localStorage.setItem("form-number", newNumber);
+
+function displayFormNumber() {
+    submittedMessage.innerHTML = "";
+    if (formNumber < 2) {
+        submittedMessage.innerHTML = "Thank you for your first movie suggestion!"
+    }
+    else if (formNumber < 3 && formNumber > 1 ) {
+        submittedMessage.innerHTML = `You have submitted ${formNumber} movie suggestions! Awesome!`
+    }
+    else {
+        submittedMessage.innerHTML = `Wow, you have submitted ${formNumber} movie suggestions! You're on a roll!`
+    }
+}
+
+window.onload =(event) => {
+    displayFormNumber();
+}
