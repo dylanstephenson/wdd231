@@ -23,7 +23,7 @@ body {
 header {
     display: grid;
     max-width: 100vw;
-    grid-template-columns: 120px, auto;
+    grid-template-columns: 120px auto;
     background: var(--header-color);
 }
 
